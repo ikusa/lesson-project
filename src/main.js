@@ -1,28 +1,25 @@
 //@flow
-type person = {
-  name :string,
-  age: number
+type Person = {
+  name: string;
+  age: number;
 };
 
-let josh: person = {
-  name:'josh',
-  age:2,
-}
-let dono: person = {
-  name:'dono',
-  age:2,
-}
-let rani: person = {
-  name:'rani',
-  age:2,
-}
-let a = 0;
-let people = [
-  josh,dono,rani
-]
-function getNames(people :Array<person>):Array<string>{
+let josh: Person = {
+  name: 'josh',
+  age: 2,
+};
+let dono: Person = {
+  name: 'dono',
+  age: 2,
+};
+let rani: Person = {
+  name: 'rani',
+  age: 2,
+};
+let people = [josh, dono, rani];
+function getNames(people: Array<Person>): Array<string> {
   let names: Array<string> = [];
-  for (let person  of people) {
+  for (let person of people) {
     names.push(person.name);
   }
   return names;

@@ -4,8 +4,6 @@ const X = 'X';
 const O = 'O';
 const _ = null;
 function findWinner(arrayOfString) {
-  let x = 0;
-  let y = 0;
   //check x
   let winner = '';
   for (let i = 0; i < 4; i = i + 3) {
@@ -27,7 +25,7 @@ function findWinner(arrayOfString) {
 }
 function checkWinner(input1, input2, input3) {
   if (input1 === input2 && input2 === input3) {
-    return 'winner ' + input1;
+    return 'winner ' + (input1 || '');
   } else {
     return null;
   }
